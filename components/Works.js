@@ -1,7 +1,7 @@
 import { Card, Col, Row } from "react-bootstrap";
 import styles from "../styles/Works.module.css";
 
-export default function Contact() {
+export default function Works() {
   return (
     <div className={styles.works}>
       <h2>Works</h2>

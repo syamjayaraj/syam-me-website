@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Card } from "react-bootstrap";
 import styles from "../styles/Home.module.css";
 import Footer from "../components/Footer";
+import Experience from "../components/Experience";
 import Education from "../components/Education";
 import Works from "../components/Works";
 import Contact from "../components/Contact";
@@ -46,6 +47,7 @@ export default function Home() {
             </p>
           </main>
           <About />
+          <Experience />
           <Education />
           <Works />
           <Contact />

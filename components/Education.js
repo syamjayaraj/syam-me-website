@@ -1,7 +1,7 @@
 import { Card, Col, Row } from "react-bootstrap";
 import styles from "../styles/Education.module.css";
 
-export default function Contact() {
+export default function Education() {
   return (
     <div className={styles.education}>
       <h2>Education</h2>
@@ -17,6 +17,7 @@ export default function Contact() {
             </div>
             <div className={styles.branch}>
               Bachelor of Technology(BTech), Computer Science and Engineering
+              (June 2013- May 2017)
             </div>
           </div>
         </div>
