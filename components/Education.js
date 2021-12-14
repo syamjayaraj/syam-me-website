@@ -8,7 +8,7 @@ export default function Contact() {
       <img src="/assets/svg/line.svg" />
       <div className={styles.lineContainer}>
         <div className={styles.line}>
-          <i class="bi bi-mortarboard"></i>
+          <i className="bi bi-mortarboard"></i>
           <div>
             <div className={styles.college}>
               <a href="http://awhengg.org/" target="_blank" rel="noreferrer">

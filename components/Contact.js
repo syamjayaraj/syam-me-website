@@ -21,7 +21,7 @@ export default function Contact() {
           rel="noreferrer"
           className={styles.box}
         >
-          <i class="bi bi-whatsapp"></i>
+          <i className="bi bi-whatsapp"></i>
           Message
         </a>
         <a
@@ -30,7 +30,7 @@ export default function Contact() {
           rel="noreferrer"
           className={styles.box}
         >
-          <i class="bi bi-telephone"></i>
+          <i className="bi bi-telephone"></i>
           +91-9946792650
         </a>
       </div>
