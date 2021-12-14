@@ -11,7 +11,7 @@ export default function Contact() {
           <i class="bi bi-mortarboard"></i>
           <div>
             <div className={styles.college}>
-              <a href="http://awhengg.org/" target="_blank">
+              <a href="http://awhengg.org/" target="_blank" rel="noreferrer">
                 AWH Engineering College, Kuttikkattoor, Kozhikode
               </a>
             </div>

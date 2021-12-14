@@ -9,7 +9,7 @@ export default function Contact() {
       <Row>
         <Col md={6}>
           <Card className={styles.card}>
-            <a href="https://kuty.me" target="_blank">
+            <a href="https://kuty.me" target="_blank" rel="noreferrer">
               <Card.Img
                 variant="top"
                 src="/assets/images/works/techomoro.png"
@@ -34,6 +34,7 @@ export default function Contact() {
             <a
               href="https://play.google.com/store/apps/details?id=com.onnich.parambath"
               target="_blank"
+              rel="noreferrer"
             >
               <Card.Img
                 variant="top"
@@ -55,7 +56,7 @@ export default function Contact() {
         </Col>
         <Col md={6}>
           <Card className={styles.card}>
-            <a href="https://kuty.me" target="_blank">
+            <a href="https://kuty.me" target="_blank" rel="noreferrer">
               <Card.Img variant="top" src="/assets/images/works/kuty.png" />
               <Card.Body>
                 <Card.Title className={styles.title}>Kuty.me</Card.Title>

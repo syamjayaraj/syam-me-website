@@ -32,12 +32,16 @@ export default function Home() {
               Software Engineer & Internet Entrepreneur,
               <br />
               Founder & CEO at{" "}
-              <a href="https://floyet.com" target="_blank">
+              <a href="https://floyet.com" target="_blank" rel="noreferrer">
                 Floyet Technologies
               </a>
               , <br />
               Blogger at{" "}
-              <a href="https://www.techomoro.com" target="_blank">
+              <a
+                href="https://www.techomoro.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Techomoro
               </a>
             </p>

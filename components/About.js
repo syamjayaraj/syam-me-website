@@ -7,28 +7,40 @@ export default function About() {
       <img src="/assets/svg/line.svg" />
       <p>
         Hello! I'm Syamlal the founder and CEO of{" "}
-        <a href="https://floyet.com" target="_blank">
+        <a href="https://floyet.com" target="_blank" rel="noreferrer">
           Floyet Technologies
         </a>
         . I'm also a full-stack developer specialized in the MERN(MongoDB,
         Express, React, Node). I also write technical content on{" "}
-        <a href="https://techomoro.com" target="_blank">
+        <a href="https://techomoro.com" target="_blank" rel="noreferrer">
           Techomoro.com
         </a>
         ,{" "}
-        <a href="https://dev.to/syamjayaraj" target="_blank">
+        <a href="https://dev.to/syamjayaraj" target="_blank" rel="noreferrer">
           Dev.to
         </a>
         ,{" "}
-        <a href="https://www.toolbox.com/user/about/SyamlalCM/" target="_blank">
+        <a
+          href="https://www.toolbox.com/user/about/SyamlalCM/"
+          target="_blank"
+          rel="noreferrer"
+        >
           Toolbox.com
         </a>
         ,{" "}
-        <a href="https://medium.com/@syamjayaraj" target="_blank">
+        <a
+          href="https://medium.com/@syamjayaraj"
+          target="_blank"
+          rel="noreferrer"
+        >
           Medium
         </a>
         , and{" "}
-        <a href="https://www.quora.com/profile/Syamlal-CM" target="_blank">
+        <a
+          href="https://www.quora.com/profile/Syamlal-CM"
+          target="_blank"
+          rel="noreferrer"
+        >
           Quora
         </a>
         . If you have a project that you want to get started on or think you

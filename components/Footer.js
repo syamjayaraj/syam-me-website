@@ -10,6 +10,7 @@ export default function Footer() {
               <a
                 href="https://twitter.com/syamjayaraj"
                 target="_blank"
+                rel="noreferrer"
                 class="btn-sm btn-default btn-lg"
               >
                 <svg
@@ -28,6 +29,7 @@ export default function Footer() {
               <a
                 href="https://www.linkedin.com/in/syamjayaraj"
                 target="_blank"
+                rel="noreferrer"
                 class="btn-sm btn-default btn-lg"
               >
                 <svg
@@ -46,6 +48,7 @@ export default function Footer() {
               <a
                 href="https://www.github.com/syamjayaraj"
                 target="_blank"
+                rel="noreferrer"
                 class="btn-sm btn-default btn-lg"
               >
                 <svg
