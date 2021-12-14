@@ -10,10 +10,13 @@
   text-align: center;
   box-shadow: 0 2px 5px 0 #dfdfdf, 0 8px 40px 0 rgb(10 14 29 / 6%);
   border: none;
-  padding: 3rem;
-  padding-bottom: 0;
-  margin: 15rem;
   margin-top: 20vh;
+  width: 100%;
+  height: auto;
+  max-width: 50vw;
+  padding: 2rem;
+  padding-bottom: 0;
+  margin-bottom: 5rem;
 }
 .header {
   display: flex;
@@ -25,7 +28,7 @@
   width: 9rem;
   height: 9rem;
   border-radius: 50%;
-  margin-top: -8rem;
+  margin-top: -5rem;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07) !important;
   transition: transform 0.2s;
   cursor: pointer;
@@ -37,6 +40,7 @@
 }
 .name {
   font-size: 2em;
+  margin-top: 1rem;
 }
 .about {
   font-weight: 100;
@@ -75,4 +79,13 @@
 }
 
 @media (max-width: 600px) {
+  .card {
+    max-width: 90vw;
+  }
+  .dp {
+    margin-top: -7rem;
+  }
+  .about {
+    font-size: 0.9em;
+  }
 }

@@ -4,14 +4,21 @@ export default function About() {
   return (
     <div className={styles.about}>
       <h2>About</h2>
-      <img src="/assets/svg/line.svg" />
+      <img src="/assets/svg/line.svg" className="line" />
       <p>
-        Hello! I'm Syamlal the founder and CEO of{" "}
+        Hello! I'm Syamlal CM, a Software Engineer & Internet Entrepreneur. I am
+        the founder and CEO of{" "}
         <a href="https://floyet.com" target="_blank" rel="noreferrer">
-          Floyet Technologies
+          Floyet Technologies, a digital branding company
         </a>
-        . I'm also a full-stack developer specialized in the MERN(MongoDB,
-        Express, React, Node). I also write technical content on{" "}
+        .
+      </p>
+      <p>
+        As a full-stack developer I can work with Next.js, React.js, React
+        Native, Express.js and MongoDB.
+      </p>
+      <p>
+        I am writing technical contents on{" "}
         <a href="https://techomoro.com" target="_blank" rel="noreferrer">
           Techomoro.com
         </a>
@@ -43,8 +50,6 @@ export default function About() {
         >
           Quora
         </a>
-        . If you have a project that you want to get started on or think you
-        need my help with something, then get in touch.
       </p>
     </div>
   );

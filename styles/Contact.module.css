@@ -1,5 +1,5 @@
 .contact {
-  border-top: 1px solid #eaeaea;
+  /* border-top: 1px solid #eaeaea; */
   padding-top: 1rem;
   font-size: 0.9em;
   margin-top: 2rem;
@@ -8,6 +8,7 @@
 .contact a {
   color: #333;
   transition: transform 0.2s;
+  text-decoration: none;
 }
 .contact a:hover {
   text-decoration: none;
@@ -23,14 +24,20 @@
 }
 .box {
   padding: 1rem;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   border: 1px solid lightgrey;
-  border-radius: 0.6rem;
+  border-radius: 0.3rem;
   align-items: center;
   display: flex;
 }
 .box i {
   font-size: 1.5em;
   margin-right: 0.5rem;
+}
+@media (max-width: 870px) {
+  .box {
+    font-size: 0.9em;
+    margin-bottom: 1rem;
+  }
 }

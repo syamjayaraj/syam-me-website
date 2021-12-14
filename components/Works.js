@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <div className={styles.works}>
       <h2>Works</h2>
-      <img src="/assets/svg/line.svg" />
+      <img src="/assets/svg/line.svg" className="line" />
       <Row>
         <Col md={6}>
           <Card className={styles.card}>
