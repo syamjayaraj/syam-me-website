@@ -9,7 +9,7 @@ export default function About() {
         Hello! I'm Syamlal CM, a Software Engineer & Internet Entrepreneur. I am
         the founder and CEO of{" "}
         <a href="https://floyet.com" target="_blank" rel="noreferrer">
-          Floyet Technologies, a digital branding company
+          Floyet Technologies - a digital branding company
         </a>
         .
       </p>
