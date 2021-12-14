@@ -2,13 +2,17 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 a {
-  color: inherit;
+  color: rgb(0 0 0);
   text-decoration: none;
+  font-weight: 600;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 * {

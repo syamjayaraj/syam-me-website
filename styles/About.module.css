@@ -1,0 +1,26 @@
+.about {
+  border-top: 1px solid #eaeaea;
+  padding-top: 1rem;
+  font-size: 0.9em;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.box {
+  padding: 1rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  border: 1px solid lightgrey;
+  border-radius: 0.6rem;
+  align-items: center;
+  display: flex;
+}
+.box i {
+  font-size: 1.5em;
+  margin-right: 0.5rem;
+}
