@@ -43,7 +43,7 @@ export default function Home() {
           Syamlal CM is a Software Engineer & Internet Entrepreneur. He is the Founder & CEO
         at Floyet Technologies."
         />
-        <meta name="og:image" content="/assets/images/syamlal.jpg" />
+        <meta name="og:image" content="/assets/images/syamlal-og.jpg" />
 
         <link rel="icon" href="/favicon.ico" />
 
