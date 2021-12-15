@@ -1,4 +1,3 @@
-import { Card, Col, Row } from "react-bootstrap";
 import styles from "../styles/Education.module.css";
 
 export default function Education() {
