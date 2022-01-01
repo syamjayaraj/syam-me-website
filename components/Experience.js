@@ -15,7 +15,7 @@ export default function Experience() {
               </a>
             </div>
             <div className={styles.branch}>
-              Co-Founder (March 2018- January 2021)
+              Co-Founder and Full-stack developer (March 2018- January 2021)
             </div>
           </div>
         </div>
