@@ -9,7 +9,7 @@ export default function Works() {
       <Row>
         <Col md={6}>
           <Card className={styles.card}>
-            <a href="https://codedesign.com" target="_blank" rel="noreferrer">
+            <a href="https://codedesign.app" target="_blank" rel="noreferrer">
               <Card.Img
                 variant="top"
                 src="/assets/images/works/codedesign.png"
