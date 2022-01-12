@@ -14,7 +14,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>
-          Syamlal CM - Software Engineer & Internet Entrepreneur, Founder & CEO
+          Syamlal CM ← Software Engineer & Internet Entrepreneur, Founder & CEO
           at Floyet Technologies, • Next.js • React.js • Express.js • MongoDB
         </title>
         <meta
@@ -29,7 +29,7 @@ export default function Home() {
         <meta
           name="og:title"
           content="
-          Syamlal CM - Software Engineer & Internet Entrepreneur, Founder & CEO
+          Syamlal CM ← Software Engineer & Internet Entrepreneur, Founder & CEO
           at Floyet Technologies, • Next.js • React.js • Express.js • MongoDB"
         />
         <meta
