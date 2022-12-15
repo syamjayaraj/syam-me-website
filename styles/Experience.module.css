@@ -10,6 +10,7 @@
 .lineContainer {
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 .line {
   display: flex;

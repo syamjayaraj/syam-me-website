@@ -33,7 +33,7 @@ export default function Works() {
         </Col>
         <Col md={6}>
           <Card className={styles.card}>
-            <a href="https://kuty.me" target="_blank" rel="noreferrer">
+            <a href="https://techomoro.com" target="_blank" rel="noreferrer">
               <Card.Img
                 variant="top"
                 src="/assets/images/works/techomoro.png"

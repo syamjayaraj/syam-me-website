@@ -55,6 +55,11 @@ export default function Home() {
 
       <Card className={styles.card}>
         <Card.Body>
+          <ul className={styles.menu}>
+            <a href="https://mirage.syam.me" target="_blank">
+              <li className={styles.menuItem}>Mirage</li>
+            </a>
+          </ul>
           <Header />
           <About />
           <Experience />
