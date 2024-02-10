@@ -6,19 +6,21 @@ export default function About() {
       <h2>About</h2>
       <img src="/assets/svg/line.svg" className="line" />
       <p>
-        Hello! I'm Syamlal CM, a Software Engineer & Internet Entrepreneur. I am
-        the founder and CEO of{" "}
+        Hey there! I'm Syamlal CM, a Software Engineer and Internet
+        Entrepreneur. I'm the Founder and CEO of{" "}
         <a href="https://floyet.com" target="_blank" rel="noreferrer">
-          Floyet Technologies - a digital branding initiative
+          Floyet Labs & Technologies - the hub for a diverse portfolio of tech
+          startups
         </a>
         .
       </p>
       <p>
-        As a full-stack developer I can work with Next.js, React.js, React
-        Native, Express.js and MongoDB.
+        I specialize in full-stack development, working with Next.js, React.js,
+        React Native, Express.js, and MongoDB to build innovative digital
+        solutions.
       </p>
       <p>
-        I am writing technical contents on{" "}
+        You can catch my tech writings on platforms like{" "}
         <a href="https://techomoro.com" target="_blank" rel="noreferrer">
           Techomoro.com
         </a>
@@ -28,21 +30,13 @@ export default function About() {
         </a>
         ,{" "}
         <a
-          href="https://www.toolbox.com/user/about/SyamlalCM/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Toolbox.com
-        </a>
-        ,{" "}
-        <a
           href="https://medium.com/@syamjayaraj"
           target="_blank"
           rel="noreferrer"
         >
           Medium
         </a>
-        , and{" "}
+        , and and{" "}
         <a
           href="https://www.quora.com/profile/Syamlal-CM"
           target="_blank"
@@ -50,6 +44,8 @@ export default function About() {
         >
           Quora
         </a>
+        . I cover everything from software development tips to entrepreneurial
+        insights.
       </p>
     </div>
   );

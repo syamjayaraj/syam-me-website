@@ -44,7 +44,7 @@ export default function Footer() {
             <a href="https://floyet.com">Floyet</a>
           </p>
           <p className="bottom">
-            Copyright © <a href="https://syam.me">Syam.me</a> 2022
+            Copyright © <a href="https://syam.me">Syam.me</a> 2024
           </p>
         </div>
       </div>
