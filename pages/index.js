@@ -15,13 +15,14 @@ export default function Home() {
       <Head>
         <title>
           Syamlal CM ← Software Engineer & Internet Entrepreneur, Founder & CEO
-          at Floyet Technologies, • Next.js • React.js • Express.js • MongoDB
+          at Floyet Labs & Technologies, • Next.js • React.js • Express.js •
+          MongoDB
         </title>
         <meta
           name="description"
           content="
         Syamlal CM is a Software Engineer & Internet Entrepreneur. He is the Founder & CEO
-        at Floyet Technologies."
+        at Floyet Labs & Technologies."
         />
         <meta name="theme-color" content="#ffffff" />
 
@@ -41,7 +42,7 @@ export default function Home() {
           name="og:description"
           content="
           Syamlal CM is a Software Engineer & Internet Entrepreneur. He is the Founder & CEO
-        at Floyet Technologies."
+        at Floyet Labs & Technologies."
         />
         <meta name="og:image" content="/assets/images/syamlal-og.jpg" />
 
