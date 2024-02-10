@@ -30,7 +30,7 @@ export default function Home() {
           name="og:title"
           content="
           Syamlal CM ← Software Engineer & Internet Entrepreneur, Founder & CEO
-          at Floyet Technologies, • Next.js • React.js • Express.js • MongoDB"
+          at Floyet Labs & Technologies, • Next.js • React.js • Express.js • MongoDB"
         />
         <meta
           name="keywords"
