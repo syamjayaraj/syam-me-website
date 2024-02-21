@@ -9,15 +9,19 @@ export default function About() {
         Hey there! I'm Syamlal CM, a Software Engineer and Internet
         Entrepreneur. I'm the Founder and CEO of{" "}
         <a href="https://floyet.com" target="_blank" rel="noreferrer">
-          Floyet Labs & Technologies - the hub for a diverse portfolio of tech
+          FLOYET Labs & Technologies - the hub for a diverse portfolio of tech
           startups
         </a>
         .
       </p>
       <p>
         I specialize in full-stack development, working with Next.js, React.js,
-        React Native, Express.js, and MongoDB to build innovative digital
-        solutions.
+        Strapi CMS, React Native, Express.js, and MongoDB to build innovative
+        digital solutions.
+      </p>
+      <p>
+        Skilled in leveraging ChatGPT for coding tasks, I enhance productivity
+        by seamlessly integrating it into my workflow.
       </p>
       <p>
         You can catch my tech writings on platforms like{" "}

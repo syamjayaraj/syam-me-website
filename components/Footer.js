@@ -41,10 +41,10 @@ export default function Footer() {
         <div className="copyright">
           <p className="top">
             Made with Love in God's own country | Powered by&nbsp;
-            <a href="https://floyet.com">Floyet</a>
+            <a href="https://floyet.com">FLOYET</a>
           </p>
           <p className="bottom">
-            Copyright © <a href="https://syam.me">Syam.me</a> 2024
+            Copyright © <a href="https://syam.me">SYAM.ME</a> 2024
           </p>
         </div>
       </div>
