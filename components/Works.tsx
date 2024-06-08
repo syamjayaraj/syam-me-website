@@ -110,8 +110,8 @@ export default function Works() {
                 <div className="card-title title">Kuty.me</div>
                 <p className="category">URL Shortener</p>
                 <p className="card-text">
-                  People don't like long and messy URLs. Kuty.me will help you
-                  to shorten any lengthy URL in just one click.
+                  People don&apos;t like long and messy URLs. Kuty.me will help
+                  you to shorten any lengthy URL in just one click.
                 </p>
                 <p className="card-text">
                   Other features in Kuty.me are Whatsapp link generator and Quiz

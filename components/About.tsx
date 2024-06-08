@@ -4,8 +4,8 @@ export default function About() {
       <h2>About</h2>
       <img src="/assets/svg/line.svg" className="line-icon" />
       <p>
-        Hey there! I'm Syamlal CM, a Software Engineer and Internet
-        Entrepreneur. I'm the Founder and CEO of{" "}
+        Hey there! I&apos;m Syamlal CM, a Software Engineer and Internet
+        Entrepreneur. I&apos;m the Founder and CEO of{" "}
         <a href="https://floyet.com" target="_blank" rel="noreferrer">
           FLOYET Labs & Technologies - the hub for a diverse portfolio of tech
           startups
