@@ -1,10 +1,8 @@
-import styles from "../styles/About.module.css";
-
 export default function About() {
   return (
-    <div className={styles.about}>
+    <div className="about">
       <h2>About</h2>
-      <img src="/assets/svg/line.svg" className="line" />
+      <img src="/assets/svg/line.svg" className="line-icon" />
       <p>
         Hey there! I'm Syamlal CM, a Software Engineer and Internet
         Entrepreneur. I'm the Founder and CEO of{" "}

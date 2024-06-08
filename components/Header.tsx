@@ -1,13 +1,11 @@
-import styles from "../styles/Header.module.css";
-
 export default function Header() {
   return (
-    <main className={styles.header}>
-      <img src="/assets/images/syamlal.jpg" className={styles.dp} />
+    <main className="header">
+      <img src="/assets/images/syamlal.jpg" className="dp" />
 
-      <h1 className={styles.name}>Syamlal CM</h1>
+      <h1 className="name">Syamlal CM</h1>
 
-      <p className={styles.about}>
+      <p className="profile">
         Software Engineer & Internet Entrepreneur,
         <br />
         Founder & CEO at{" "}

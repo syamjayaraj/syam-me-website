@@ -1,8 +1,6 @@
-import styles from "../styles/Footer.module.css";
-
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className="footer">
       <div className="container">
         <div className="social-accounts">
           <ul className="list-inline">
@@ -13,7 +11,7 @@ export default function Footer() {
                 rel="noreferrer"
                 className="btn-sm btn-default btn-lg"
               >
-                <i class="bi bi-linkedin"></i>
+                <i className="bi bi-linkedin"></i>
               </a>
             </li>
             <li className="list-inline-item">
@@ -23,24 +21,24 @@ export default function Footer() {
                 rel="noreferrer"
                 className="btn-sm btn-default btn-lg"
               >
-                <i class="bi bi-twitter"></i>
+                <i className="bi bi-twitter"></i>
               </a>
             </li>
             <li className="list-inline-item">
               <a
-                href="https://www.github.com/techomoro"
+                href="https://www.github.com/codeariv"
                 target="_blank"
                 rel="noreferrer"
                 className="btn-sm btn-default btn-lg"
               >
-                <i class="bi bi-github"></i>
+                <i className="bi bi-github"></i>
               </a>
             </li>
           </ul>
         </div>
         <div className="copyright">
           <p className="top">
-            Made with Love in God's own country | Powered by&nbsp;
+            Carefully Handcrafted in INDIA | Powered by&nbsp;
             <a href="https://floyet.com">FLOYET</a>
           </p>
           <p className="bottom">

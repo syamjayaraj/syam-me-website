@@ -1,0 +1,386 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+}
+
+a {
+  color: rgb(0 0 0);
+  text-decoration: none;
+  font-weight: 600;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: underline;
+}
+p {
+  line-height: 1.6rem;
+}
+.line-icon {
+  margin-bottom: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Home */
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  font-size: 0.8em;
+}
+.waviy span {
+  font-family: "Alfa Slab One", cursive;
+  position: relative;
+  display: inline-block;
+  color: #191919;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+@keyframes waviy {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-1px);
+  }
+}
+
+/* Hover effect */
+.waviy span:hover {
+  animation: waviy-hover 1s infinite;
+}
+
+@keyframes waviy-hover {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+}
+
+.container {
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-card {
+  text-align: center;
+  box-shadow: 0 2px 5px 0 #dfdfdf, 0 8px 40px 0 rgb(10 14 29 / 6%);
+  border: none;
+  margin-top: 20vh;
+  width: 100%;
+  height: auto;
+  max-width: 50vw;
+  padding: 2rem;
+  padding-bottom: 0;
+  margin-bottom: 5rem;
+}
+
+.footer {
+  border-top: 1px solid #eaeaea;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+.menu {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.menuItem {
+  list-style: none;
+}
+.menu a {
+  text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  .custom-card {
+    max-width: 67vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .custom-card {
+    max-width: 72vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .custom-card {
+    max-width: 90vw;
+    padding: 0.5rem;
+  }
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.header .dp {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  margin-top: -5rem;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07) !important;
+  transition: transform 0.2s;
+  cursor: pointer;
+  border: 3px solid white;
+}
+.header .dp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px 0 #dfdfdf, 0 8px 40px 0 rgb(10 14 29 / 6%);
+}
+.header .name {
+  font-size: 2em;
+  margin-top: 1rem;
+}
+.header .profile {
+  font-weight: 100;
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .header .dp {
+    margin-top: -7rem;
+  }
+  .header .profile {
+    font-size: 0.9em;
+  }
+}
+
+/* About */
+.about {
+  padding-top: 1rem;
+  font-size: 0.9em;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about .boxes {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.about .box {
+  padding: 1rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  border: 1px solid lightgrey;
+  border-radius: 0.6rem;
+  align-items: center;
+  display: flex;
+}
+.about .box i {
+  font-size: 1.5em;
+  margin-right: 0.5rem;
+}
+
+/* Education */
+.education {
+  padding-top: 1rem;
+  font-size: 0.9em;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.education .branch {
+  font-size: 0.8em;
+}
+.education .lineContainer {
+  display: flex;
+  justify-content: center;
+}
+.education .line {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+}
+.education .college {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.education .line i {
+  font-size: 1.5em;
+  margin-right: 1rem;
+}
+
+/* Experience */
+.experience {
+  padding-top: 1rem;
+  font-size: 0.9em;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.experience .branch {
+  font-size: 0.8em;
+}
+.experience .lineContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.experience .line {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+}
+.experience .college {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.experience .line i {
+  font-size: 1.5em;
+  margin-right: 1rem;
+}
+
+/* Work */
+.works {
+  padding-top: 1rem;
+  font-size: 0.9em;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.works a {
+  color: black;
+  text-decoration: none;
+}
+
+.works a:hover {
+  text-decoration: none;
+}
+.works .title {
+  margin-bottom: 0;
+  font-size: 1.25em;
+}
+.works .category {
+  font-size: 0.8em;
+}
+.works .custom-card {
+  transition: transform 0.2s;
+  margin: 0 auto;
+  margin-bottom: 1.2rem;
+  padding: 0;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.works .custom-card:hover {
+  transform: scale(1.1);
+  border: none;
+  box-shadow: 0 2px 5px 0 #dfdfdf, 0 8px 40px 0 rgb(10 14 29 / 6%);
+}
+.works .boxes {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.works .box {
+  padding: 1rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  border: 1px solid lightgrey;
+  border-radius: 0.6rem;
+  align-items: center;
+  display: flex;
+}
+.works .box i {
+  font-size: 1.5em;
+  margin-right: 0.5rem;
+}
+
+/* Contact */
+.contact {
+  padding-top: 1rem;
+  font-size: 0.9em;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.contact a {
+  color: #333;
+  transition: transform 0.2s;
+  text-decoration: none;
+}
+.contact a:hover {
+  text-decoration: none;
+  background: #f3f3f3;
+  transform: scale(1.2);
+  border: none;
+  box-shadow: 0 2px 5px 0 #dfdfdf, 0 8px 40px 0 rgb(10 14 29 / 6%);
+}
+.contact .boxes {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.contact .box {
+  padding: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border: 1px solid lightgrey;
+  border-radius: 0.3rem;
+  align-items: center;
+  display: flex;
+}
+.contact .box i {
+  font-size: 1.5em;
+  margin-right: 0.5rem;
+}
+@media (max-width: 991px) {
+  .contact .box {
+    font-size: 0.9em;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #eaeaea;
+  padding-top: 1rem;
+  font-size: 0.9em;
+  margin-top: 2rem;
+}
