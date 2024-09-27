@@ -46,6 +46,64 @@ export default function Works() {
                   Topics: React.js, Next.js, Express.js, MongoDB, Strapi CMS and
                   more.
                 </p>
+
+                <div className="social-accounts">
+                  <ul className="list-inline">
+                    <li className="list-inline-item">
+                      <a
+                        href="https://www.youtube.com/@CodeARIV"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn-sm btn-default btn-lg"
+                      >
+                        <i className="bi bi-youtube"></i>
+                      </a>
+                    </li>
+                    <li className="list-inline-item">
+                      <a
+                        href="https://www.youtube.com/@CodeARIV_Malayalam"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn-sm btn-default btn-lg"
+                      >
+                        <i className="bi bi-youtube"></i>
+                      </a>
+                    </li>
+                    <li className="list-inline-item">
+                      <a
+                        href="https://www.github.com/codeariv"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn-sm btn-default btn-lg"
+                      >
+                        <i className="bi bi-github"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div className="col col-md-6">
+          <div className="card custom-card">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.gymtie"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img className="card-img" src="/assets/images/works/gymtie.png" />
+              <div className="card-body">
+                <div className="card-title title">GymTie App</div>
+                <p className="category">Android App</p>
+                <p className="card-text">
+                  Gym management app where gym owners can manage memberships and
+                  schedules
+                </p>
+                <p className="card-text">
+                  Tools used: Expo, React Native, Strapi CMS, GraphQL, MySQL,
+                  TypeScript, Digitalocean.
+                </p>
               </div>
             </a>
           </div>
@@ -72,7 +130,7 @@ export default function Works() {
                   The app is completely in the Malayalam language.
                 </p>
                 <p className="card-text">
-                  Tools used: React Native, React.js, Strapi CMS, MySQL,
+                  Tools used: Expo, React Native, Strapi CMS, MySQL, TypeScript,
                   Digitalocean.
                 </p>
               </div>

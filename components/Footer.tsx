@@ -26,7 +26,7 @@ export default function Footer() {
             </li>
             <li className="list-inline-item">
               <a
-                href="https://www.github.com/codeariv"
+                href="https://www.github.com/syamjayaraj"
                 target="_blank"
                 rel="noreferrer"
                 className="btn-sm btn-default btn-lg"
