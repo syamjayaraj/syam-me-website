@@ -13,6 +13,9 @@ export default function Header() {
           FLOYET Labs & Technologies
         </a>
       </p>
+      <p>
+        Next.js | React.js | React Native | Strapi CMS | Express.js | MongoDB
+      </p>
     </main>
   );
 }

@@ -14,7 +14,7 @@ export default function Experience() {
               </a>
             </div>
             <div className="branch">
-              Senior Software Engineer (January 2022 - January 2024)
+              Senior Software Engineer (January 2022 - March 2024)
             </div>
           </div>
         </div>

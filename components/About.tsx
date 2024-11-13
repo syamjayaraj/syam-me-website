@@ -23,8 +23,8 @@ export default function About() {
       </p>
       <p>
         You can catch my tech writings on platforms like{" "}
-        <a href="https://techomoro.com" target="_blank" rel="noreferrer">
-          Techomoro.com
+        <a href="https://codeariv.com" target="_blank" rel="noreferrer">
+          CodeARIV.com
         </a>
         ,{" "}
         <a href="https://dev.to/syamjayaraj" target="_blank" rel="noreferrer">

@@ -87,11 +87,7 @@ export default function Works() {
         </div>
         <div className="col col-md-6">
           <div className="card custom-card">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.gymtie"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://gymtie.com" target="_blank" rel="noreferrer">
               <img className="card-img" src="/assets/images/works/gymtie.png" />
               <div className="card-body">
                 <div className="card-title title">GymTie App</div>
