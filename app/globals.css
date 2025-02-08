@@ -387,3 +387,654 @@ p {
   font-size: 0.9em;
   margin-top: 2rem;
 }
+
+
+.dark-theme {
+  background: #000;
+  color: #fff;
+  font-family: 'Crimson Text', serif; /* A gothic-style font */
+}
+
+.horror-card {
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid #333;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+}
+
+.horror-text span {
+  color: #fff;
+  text-shadow: 0 0 10px #ff0000;
+  animation: flicker var(--duration) infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+  25%, 75% { opacity: 0.9; }
+} 
+
+
+
+/* Base Styles */
+:root {
+  --blood-red: #8b0000;
+  --dark-gray: #1a1a1a;
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  background-color: var(--dark-gray);
+  color: #fff;
+  font-family: 'Crimson Text', serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Main Container */
+.main-container {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Enhanced Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  padding: 2rem;
+  width: 90%;
+  max-width: 1400px;
+}
+
+/* Larger Horror Title */
+.horror-title {
+  font-family: 'Butcherman', cursive;
+  font-size: 8.5rem; /* Increased from 6rem */
+  margin-bottom: 3rem;
+  letter-spacing: 8px;
+  line-height: 1.2;
+  text-shadow: 
+    0 0 20px #ff0000,
+    0 0 40px #ff0000,
+    0 0 60px #ff0000,
+    0 0 80px #800000;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.horror-title:hover {
+  transform: scale(1.05);
+}
+
+/* Enhanced Tagline */
+.tagline {
+  font-family: 'Creepster', cursive;
+  font-size: 2.5rem; /* Increased from 1.5rem */
+  margin: 2rem 0;
+  color: #fff;
+  text-shadow: 
+    0 0 10px #ff0000,
+    0 0 20px #ff0000;
+  letter-spacing: 4px;
+}
+
+/* Larger CTA Buttons */
+.cta-buttons {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.blood-btn {
+  font-size: 1.5rem;
+  padding: 1.5rem 3rem;
+  min-width: 250px;
+}
+
+/* Enhanced Season Info */
+.season-info {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 2;
+  transform: scale(1.2);
+}
+
+.season-card {
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.season-number {
+  font-size: 3rem;
+}
+
+.episode-title {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .horror-title {
+    font-size: 6rem;
+  }
+  
+  .tagline {
+    font-size: 2rem;
+  }
+  
+  .blood-btn {
+    font-size: 1.2rem;
+    padding: 1.2rem 2.4rem;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .horror-title {
+    font-size: 4rem;
+    letter-spacing: 4px;
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .blood-btn {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    min-width: 180px;
+  }
+  
+  .season-info {
+    bottom: 2rem;
+    right: 2rem;
+    transform: scale(1);
+  }
+}
+
+/* Enhanced Blood Overlay */
+.blood-overlay {
+  opacity: 0.4;
+  background-size: 200% 200%;
+  animation: bloodFlow 15s ease infinite;
+}
+
+@keyframes bloodFlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Enhanced Fog Effect */
+.fog-container {
+  opacity: 0.7;
+}
+
+.fog-img {
+  filter: contrast(120%) brightness(90%);
+}
+
+/* Featured Story */
+.featured-story {
+  padding: 4rem 2rem;
+  background: linear-gradient(var(--dark-gray), #000);
+}
+
+.story-card {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--blood-red);
+}
+
+/* Story Collection */
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.story-item {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #333;
+  transition: transform 0.3s ease;
+}
+
+.story-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(139, 0, 0, 0.3);
+}
+
+/* Newsletter */
+.newsletter {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+              url('/spooky-background.jpg') center/cover;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #333;
+  color: #fff;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.social-icon {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--blood-red);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: var(--blood-red);
+}
+
+/* Animation */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Special+Elite&display=swap');
+
+:root {
+  --blood-red: #8b0000;
+  --dark-gray: #1a1a1a;
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Hero Video Background */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.blood-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/blood-texture.png');
+  opacity: 0.3;
+  z-index: 1;
+  animation: bloodDrip 10s linear infinite;
+}
+
+/* Horror Title Animation */
+.horror-title {
+  font-family: 'Nosifer', cursive;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.dripping-letter {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-shadow: 
+    0 0 10px #ff0000,
+    0 0 20px #ff0000,
+    0 0 30px #ff0000;
+  animation: flicker calc(1s + calc(var(--i) * 0.1s)) infinite;
+}
+
+.dripping-letter::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: #ff0000;
+  transform-origin: top;
+  animation: drip 2s infinite;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+/* Blood Button Effects */
+.blood-btn {
+  position: relative;
+  overflow: hidden;
+  font-family: 'Special Elite', cursive;
+  background: var(--blood-red);
+  border: 2px solid #ff0000;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blood-btn:hover {
+  background: #a00000;
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 20px rgba(255, 0, 0, 0.5),
+    0 0 40px rgba(255, 0, 0, 0.3);
+}
+
+.blood-drip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ff0000;
+  transform-origin: top;
+  animation: drip 2s infinite;
+}
+
+/* Episode Cards */
+.episode-card {
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--blood-red);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.episode-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 5px 15px rgba(139, 0, 0, 0.3),
+    0 0 30px rgba(255, 0, 0, 0.2);
+}
+
+.episode-card:hover .play-overlay {
+  opacity: 1;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(139, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Animations */
+@keyframes drip {
+  0% {
+    transform: scaleY(0);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes bloodDrip {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% { 
+    opacity: 1;
+    text-shadow: 
+      0 0 10px #ff0000,
+      0 0 20px #ff0000,
+      0 0 30px #ff0000;
+  }
+  50% { 
+    opacity: 0.7;
+    text-shadow: none;
+  }
+}
+
+/* Episodes Grid */
+.episodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Import horror fonts */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Butcherman&family=Eater&display=swap');
+
+/* Updated root variables */
+:root {
+  --blood-red: #8b0000;
+  --dark-gray: #1a1a1a;
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  --creepy-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+}
+
+/* Enhanced Horror Title */
+.horror-title {
+  font-family: 'Butcherman', cursive;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  letter-spacing: 4px;
+  text-shadow: 
+    0 0 10px #ff0000,
+    0 0 20px #ff0000,
+    0 0 30px #ff0000,
+    0 0 40px #800000;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: 'Creepster', cursive;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: var(--creepy-shadow);
+  text-align: center;
+  margin: 2rem 0;
+  letter-spacing: 2px;
+}
+
+/* Enhanced Blood Drip Animation */
+.blood-drip-text {
+  position: relative;
+}
+
+.blood-drip-text::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(to bottom, #ff0000, #8b0000);
+  transform-origin: top;
+  animation: bloodDrip 3s infinite;
+}
+
+/* New Footer Section */
+.horror-footer {
+  background: linear-gradient(to bottom, transparent, #000000),
+              url('/footer-texture.png');
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  padding: 1rem;
+}
+
+.footer-section h3 {
+  font-family: 'Eater', cursive;
+  color: var(--blood-red);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Special Elite', cursive;
+}
+
+.footer-section a:hover {
+  color: var(--blood-red);
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  transform: translateX(5px);
+  display: inline-block;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 0, 0, 0.2);
+  font-family: 'Special Elite', cursive;
+  position: relative;
+}
+
+/* Spider Web Animation */
+.spider-web {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: url('/spider-web.png') no-repeat;
+  background-size: contain;
+  opacity: 0.2;
+}
+
+/* New Animations */
+@keyframes bloodDrip {
+  0% {
+    height: 0;
+    opacity: 1;
+  }
+  50% {
+    height: 20px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes haunt {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(5px) translateY(-5px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+/* Enhanced Episode Cards */
+.episode-card {
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--blood-red);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.episode-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    0 5px 15px rgba(139, 0, 0, 0.3),
+    0 0 30px rgba(255, 0, 0, 0.2);
+}
+
+.episode-card h3 {
+  font-family: 'Creepster', cursive;
+  color: var(--blood-red);
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+/* Floating Ghost Animation */
+.ghost-float {
+  animation: haunt 3s ease-in-out infinite;
+}
