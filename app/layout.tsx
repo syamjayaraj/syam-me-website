@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Dancing_Script } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -9,7 +9,15 @@ const gtmId = process?.env?.NEXT_PUBLIC_GTM_ID as string;
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400"],
+  weight: ["400", "600", "700"],
+  variable: "--font-montserrat",
+});
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "600", "700"],
+  variable: "--font-dancing",
 });
 
 export const metadata: Metadata = {
@@ -47,7 +55,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GoogleTagManager gtmId={gtmId} />
-      <body className={montserrat.className}>{children}</body>
+      <body
+        className={`${montserrat.variable} ${dancingScript.variable} ${montserrat.className}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
