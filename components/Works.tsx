@@ -1,185 +1,116 @@
-export default function Works() {
-  return (
-    <div className="works">
-      <h2>Works</h2>
-      <img src="/assets/svg/line.svg" className="line-icon" />
-      <div className="row">
-        <div className="col col-md-6">
-          <div className="card custom-card">
-            <a href="https://codedesign.ai" target="_blank" rel="noreferrer">
-              <img
-                className="card-img"
-                src="/assets/images/works/codedesign.jpg"
-              />
-              <div className="card-body">
-                <div className="card-title title">Codedesign.ai</div>
-                <p className="category">
-                  No-code platform to build, launch & export pages
-                </p>
-                <p className="card-text">
-                  Under Redmonark Technologies, we have developed a No-code
-                  platform to help developers design websites easier.
-                </p>
-                <p className="card-text">
-                  Tools used: React.js, Express.js, MongoDB, Cloudinary, Docker,
-                  AWS.
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="col col-md-6">
-          <div className="card custom-card">
-            <a href="https://codeariv.com" target="_blank" rel="noreferrer">
-              <img
-                className="card-img"
-                src="/assets/images/works/codeariv.jpg"
-              />
-              <div className="card-body">
-                <div className="card-title title">CodeARIV.com</div>
-                <p className="category">Blog</p>
-                <p className="card-text">
-                  A technology blog mainly dealing with the latest trends in
-                  Full-stack web and mobile app development.
-                </p>
-                <p className="card-text">
-                  Topics: React.js, Next.js, Express.js, MongoDB, Strapi CMS and
-                  more.
-                </p>
+"use client";
 
-                <div className="social-accounts">
-                  <ul className="list-inline">
-                    <li className="list-inline-item">
-                      <a
-                        href="https://www.youtube.com/@CodeARIV"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="btn-sm btn-default btn-lg"
-                      >
-                        <i className="bi bi-youtube"></i>
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a
-                        href="https://www.youtube.com/@CodeARIV_Malayalam"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="btn-sm btn-default btn-lg"
-                      >
-                        <i className="bi bi-youtube"></i>
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a
-                        href="https://www.github.com/codeariv"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="btn-sm btn-default btn-lg"
-                      >
-                        <i className="bi bi-github"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="col col-md-6">
-          <div className="card custom-card">
-            <a href="https://gymtie.com" target="_blank" rel="noreferrer">
-              <img className="card-img" src="/assets/images/works/gymtie.png" />
-              <div className="card-body">
-                <div className="card-title title">GymTie App</div>
-                <p className="category">Android App</p>
-                <p className="card-text">
-                  Gym management app where gym owners can manage memberships and
-                  schedules
-                </p>
-                <p className="card-text">
-                  Tools used: Expo, React Native, Strapi CMS, GraphQL, MySQL,
-                  TypeScript, Digitalocean.
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="col col-md-6">
-          <div className="card custom-card">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.onnich.parambath"
-              target="_blank"
-              rel="noreferrer"
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+
+type Category = "products" | "writing";
+
+export default function Works() {
+  const [activeTab, setActiveTab] = useState<Category>("products");
+
+  const products = [
+    {
+      title: "GymTie App",
+      category: "Mobile App",
+      desc: "Comprehensive gym management solution for owners.",
+      link: "https://gymtie.com",
+      color: "bg-orange-500"
+    },
+    {
+      title: "Parambath App",
+      category: "Community Mobile App",
+      desc: "Localized app providing instant access to village services.",
+      link: "https://parambath.onnich.com",
+      color: "bg-green-500"
+    },
+    {
+      title: "YoungMenu",
+      category: "SaaS",
+      desc: "Digital menu solution for restaurants and home bakers. (Coming Soon)",
+      link: "https://youngmenu.com",
+      color: "bg-pink-500"
+    },
+  ];
+
+  const writings = [
+    {
+      title: "Mirage",
+      category: "Writing",
+      desc: "A creative space for my Malayalam short stories, essays, and articles.",
+      link: "https://mirage.syam.me",
+      color: "bg-teal-500"
+    },
+    {
+      title: "CodeARIV",
+      category: "Tech Blog",
+      desc: "Demystifying complex tech concepts for everyone.",
+      link: "https://codeariv.com",
+      color: "bg-blue-500"
+    }
+  ];
+
+  const currentItems = activeTab === "products" ? products : writings;
+
+  return (
+    <section id="works" className="py-20 container-custom">
+      <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+         <div>
+           <h2 className="text-4xl font-bold tracking-tight mb-2">Selected Works</h2>
+           <span className="text-sm text-gray-500">2018 — Present</span>
+         </div>
+         
+         {/* Tab Switcher */}
+         <div className="flex bg-white/5 p-1 rounded-xl border border-white/10">
+            <button 
+              onClick={() => setActiveTab("products")}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === "products" ? "bg-white text-black" : "text-gray-400 hover:text-white"}`}
             >
-              <img
-                className="card-img"
-                src="/assets/images/works/parambathapp.png"
-              />
-              <div className="card-body">
-                <div className="card-title title">Parambath App</div>
-                <p className="category">Android App</p>
-                <p className="card-text">
-                  It is designed to provide instant access to services and
-                  notifications for people living in Thalakkulathur village
-                </p>
-                <p className="card-text">
-                  The app is completely in the Malayalam language.
-                </p>
-                <p className="card-text">
-                  Tools used: Expo, React Native, Strapi CMS, MySQL, TypeScript,
-                  Digitalocean.
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="col col-md-6">
-          <div className="card custom-card">
-            <a href="https://youngmenu.com" target="_blank" rel="noreferrer">
-              <img
-                className="card-img"
-                src="/assets/images/works/youngmenu.jpg"
-              />
-              <div className="card-body">
-                <div className="card-title title">YoungMenu.com</div>
-                <p className="category">
-                  Virtual menu card for Restaurants and home bakers
-                </p>
-                <p className="card-text">
-                  Virtual menu cards are easy to maintain and update. It can
-                  also provide the minute details of each item in a restaurant.
-                </p>
-                <p className="card-text">
-                  Tools used: Next.js, Strapi CMS, MySQL, Vercel, Digitalocean.
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="col col-md-6">
-          <div className="card custom-card">
-            <a href="https://kuty.me" target="_blank" rel="noreferrer">
-              <img className="card-img" src="/assets/images/works/kuty.png" />
-              <div className="card-body">
-                <div className="card-title title">Kuty.me</div>
-                <p className="category">URL Shortener</p>
-                <p className="card-text">
-                  People don&apos;t like long and messy URLs. Kuty.me will help
-                  you to shorten any lengthy URL in just one click.
-                </p>
-                <p className="card-text">
-                  Other features in Kuty.me are Whatsapp link generator and Quiz
-                  maker
-                </p>
-                <p className="card-text">
-                  Tools used: Next.js, Express.js, MongoDB, Cloudinary, Vercel,
-                  Digitalocean.
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
+              Tech Products
+            </button>
+            <button 
+              onClick={() => setActiveTab("writing")}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === "writing" ? "bg-white text-black" : "text-gray-400 hover:text-white"}`}
+            >
+              Writings
+            </button>
+         </div>
       </div>
-    </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {currentItems.map((project, index) => (
+          <motion.a
+            key={project.title}
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className="bento-card group p-8 min-h-[280px] flex flex-col justify-between relative hover:bg-white/5"
+          >
+             <div className="space-y-4">
+               <div className="flex justify-between items-start">
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium bg-white/5 border border-white/10 ${project.color} bg-opacity-10 text-white`}>
+                    {project.category}
+                  </span>
+                  <ArrowUpRight className="w-5 h-5 text-gray-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+               </div>
+               
+               <h3 className="text-2xl font-bold group-hover:text-white transition-colors">
+                  {project.title}
+               </h3>
+               <p className="text-gray-400 text-sm leading-relaxed">
+                  {project.desc}
+               </p>
+             </div>
+             
+             <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden mt-6">
+                <div className={`h-full w-0 group-hover:w-full transition-all duration-700 ease-out ${project.color}`} />
+             </div>
+          </motion.a>
+        ))}
+      </div>
+    </section>
   );
 }

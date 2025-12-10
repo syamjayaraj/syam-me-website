@@ -8,20 +8,16 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <main className="min-h-screen bg-transparent">
       <Hero />
-      <div className="container">
-        <div className="card custom-card">
-          <div className="card-body">
-            <About />
-            <Experience />
-            <Education />
-            <Works />
-            <Contact />
-            <Footer />
-          </div>
-        </div>
+      <div className="space-y-24 pb-20">
+        <About />
+        <Works />
+        <Experience />
+        <Education />
+        <Contact />
       </div>
-    </>
+      <Footer />
+    </main>
   );
 }

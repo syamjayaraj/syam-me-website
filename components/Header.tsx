@@ -10,7 +10,7 @@ export default function Header() {
         <br />
         Founder & CEO at{" "}
         <a href="https://floyet.com" target="_blank" rel="noreferrer">
-          FLOYET Labs & Technologies
+          FLOYET Labs & Technologies LLP
         </a>
       </p>
       <p>

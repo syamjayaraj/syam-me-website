@@ -1,40 +1,30 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Experience() {
+  const jobs = [
+    { company: "Floyet Labs & Technologies LLP", role: "Founder & CEO", period: "2024 — Present", link: "https://floyet.com" },
+    { company: "ISPG Technologies", role: "Senior Software Engineer", period: "2022 — 2024", link: "https://www.ispg.co/" },
+    { company: "Redmonark Technologies", role: "Co-Founder & CTO", period: "2018 — 2020", link: "https://redmonark.com" },
+  ];
+
   return (
-    <div className="experience">
-      <h2>Experience</h2>
-      <img src="/assets/svg/line.svg" className="line-icon" />
-
-      <div className="lineContainer">
-        <div className="line">
-          <i className="bi bi-briefcase"></i>
-          <div>
-            <div className="college">
-              <a href="https://www.ispg.co/" target="_blank" rel="noreferrer">
-                ISPG Technologies India Pvt. Ltd.
-              </a>
+    <section className="py-20 container-custom max-w-4xl mx-auto">
+      <h2 className="text-3xl font-bold mb-12 border-b border-white/10 pb-4">Experience</h2>
+      <div className="space-y-8">
+        {jobs.map((job, index) => (
+          <div key={index} className="flex flex-col md:flex-row md:items-center justify-between group">
+            <div>
+              <h3 className="text-xl font-bold group-hover:text-blue-400 transition-colors">
+                 <a href={job.link} target="_blank" rel="noreferrer">{job.company}</a>
+              </h3>
+              <p className="text-gray-400">{job.role}</p>
             </div>
-            <div className="branch">
-              Senior Software Engineer (January 2022 - March 2024)
-            </div>
+            <p className="text-gray-500 font-mono text-sm mt-1 md:mt-0">{job.period}</p>
           </div>
-        </div>
+        ))}
       </div>
-
-      <div className="lineContainer">
-        <div className="line">
-          <i className="bi bi-briefcase"></i>
-          <div>
-            <div className="college">
-              <a href="https://redmonark.com/" target="_blank" rel="noreferrer">
-                Redmonark Technologies LLP
-              </a>
-            </div>
-            <div className="branch">
-              Co-Founder and Full-stack developer (March 2018 - January 2021)
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 }

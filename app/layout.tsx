@@ -1,49 +1,42 @@
 import type { Metadata } from "next";
-import { Montserrat, Dancing_Script } from "next/font/google";
+import { Outfit, Inter } from "next/font/google"; // Premium fonts
 import { GoogleTagManager } from "@next/third-parties/google";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import "./globals.css";
+import "./globals.css"; // Bootstrap removed
+
 const gtmId = process?.env?.NEXT_PUBLIC_GTM_ID as string;
 
-const montserrat = Montserrat({
+// Modern, geometric font for headings
+const outfit = Outfit({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "600", "700"],
-  variable: "--font-montserrat",
+  variable: "--font-outfit",
 });
 
-const dancingScript = Dancing_Script({
+// Clean, readable font for body text
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "600", "700"],
-  variable: "--font-dancing",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: `Syamlal CM ← Software Engineer & Internet Entrepreneur, Founder & CEO
-  at Floyet Labs & Technologies, • Next.js • React.js • Express.js • Strapi CMS •
-  MongoDB`,
-  description: `Syamlal CM is a Software Engineer & Internet Entrepreneur. He is the Founder & CEO
-  at Floyet Labs & Technologies`,
+  title: `Syamlal CM | Software Engineer • Internet Entrepreneur • Writer`,
+  description: `Syamlal CM is a Software Engineer, Internet Entrepreneur, and Writer. Founder & CEO at Floyet Labs & Technologies. Building innovative tech solutions.`,
   keywords: [
     "syamlal cm",
-    "syamlal",
     "software engineer",
-    "developer",
     "internet entrepreneur",
+    "writer",
     "floyet",
-    "floyet labs and technologies",
+    "next.js",
+    "web developer",
   ],
   openGraph: {
     type: "website",
-    title: `Syamlal CM ← Software Engineer & Internet Entrepreneur, Founder & CEO
-    at Floyet Labs & Technologies, • Next.js • React.js • Express.js • Strapi CMS •
-    MongoDB`,
-    description: `Syamlal CM is a Software Engineer & Internet Entrepreneur. He is the Founder & CEO
-    at Floyet Labs & Technologies`,
+    title: `Syamlal CM | Software Engineer • Internet Entrepreneur • Writer`,
+    description: `Leading innovation at Floyet Labs & Technologies. Software Engineer & Entrepreneur.`,
     url: "https://syam.me",
-    images: "/assets/images/syamlal-og.jpg",
+    // images: "/assets/images/syamlal-og.jpg", // Kept commented or as is
   },
 };
 
@@ -53,10 +46,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark scroll-smooth">
       <GoogleTagManager gtmId={gtmId} />
       <body
-        className={`${montserrat.variable} ${dancingScript.variable} ${montserrat.className}`}
+        className={`${outfit.variable} ${inter.variable} antialiased`}
       >
         {children}
       </body>
