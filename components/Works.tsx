@@ -17,20 +17,6 @@ export default function Works() {
       link: "https://gymtie.com",
       color: "bg-orange-500",
     },
-    {
-      title: "Parambath App",
-      category: "Community Mobile App",
-      desc: "Localized app providing instant access to village services.",
-      link: "https://parambath.onnich.com",
-      color: "bg-green-500",
-    },
-    {
-      title: "YoungMenu",
-      category: "SaaS",
-      desc: "Digital menu solution for restaurants and home bakers. (Coming Soon)",
-      link: "https://youngmenu.com",
-      color: "bg-pink-500",
-    },
   ];
 
   const writings = [
@@ -40,13 +26,6 @@ export default function Works() {
       desc: "A creative space for my Malayalam short stories, essays, and articles.",
       link: "https://mirage.syam.me",
       color: "bg-teal-500",
-    },
-    {
-      title: "Techomoro",
-      category: "Tech Blog",
-      desc: "Demystifying complex tech concepts for everyone.",
-      link: "https://techomoro.com",
-      color: "bg-blue-500",
     },
   ];
 

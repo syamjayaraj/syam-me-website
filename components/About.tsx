@@ -21,7 +21,6 @@ export default function About() {
             </p>
             <p>
               My journey involves full-stack development, cloud architecture, and technical writing. 
-              I share my tech learnings through <strong>CodeARIV</strong> and my literary works through my Malayalam blog, <strong>Mirage</strong>.
             </p>
           </div>
         </motion.div>

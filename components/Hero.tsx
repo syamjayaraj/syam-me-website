@@ -57,7 +57,7 @@ export default function Hero() {
             </h2>
             <p className="text-gray-400 max-w-sm leading-relaxed">
               Founder & CEO of Floyet Labs & Technologies LLP. Specializing in
-              high-performance web applications and scalable architecture.
+              high-performance web/mobile applications and scalable architecture.
             </p>
           </div>
           <div className="flex gap-4 pt-8 z-10">
