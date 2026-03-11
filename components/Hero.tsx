@@ -10,6 +10,7 @@ import {
   Twitter,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -70,6 +71,12 @@ export default function Hero() {
             <a href="#works" className="btn-magnetic">
               View Work
             </a>
+            <Link href="/blog" className="btn-magnetic bg-blue-600/20 text-blue-400 hover:bg-blue-600/30">
+              Blog
+            </Link>
+            <Link href="/mirage" className="btn-magnetic bg-purple-600/20 text-purple-400 hover:bg-purple-600/30">
+              Stories
+            </Link>
           </div>
 
           {/* Subtle Abstract Background */}
