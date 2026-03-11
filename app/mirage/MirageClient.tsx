@@ -18,6 +18,21 @@ export default function MirageClient({
 }: MirageClientProps) {
   const [isMuted, setIsMuted] = useState(true);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (containerRef.current) {
+        const x = (e.clientX / window.innerWidth) * 100;
+        const y = (e.clientY / window.innerHeight) * 100;
+        containerRef.current.style.setProperty("--mouse-x", `${x}%`);
+        containerRef.current.style.setProperty("--mouse-y", `${y}%`);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
   const toggleMute = () => {
     if (audioRef.current) {
@@ -68,7 +83,8 @@ export default function MirageClient({
   );
 
   return (
-    <main className={`${styles.main} ${styles.ghostlyMain}`}>
+    <div ref={containerRef} className={styles.main}>
+      <main className={styles.ghostlyMain}>
       {/* Background Audio */}
       <audio
         ref={audioRef}
@@ -91,9 +107,14 @@ export default function MirageClient({
       <section className={styles.storiesSection}>
         <div className={styles.container}>
           <div className={styles.headerStack}>
-            <h1 className={`${styles.title} ${styles.flicker}`}>മരീചിക (Mirage)</h1>
+            <span className="text-red-600 text-xs font-bold tracking-[0.5em] uppercase mb-4 block">Parallel Realms</span>
+           <Link href="/mirage">
+              <h1 className={styles.title}>
+                മരീചിക
+              </h1>
+            </Link>
             <p className={styles.subtitle}>
-              Step into the parallel realms of mystery and the unknown
+              Exploring the Unseen and the Unknown
             </p>
           </div>
 
@@ -136,5 +157,6 @@ export default function MirageClient({
         </div>
       </section>
     </main>
+    </div>
   );
 }

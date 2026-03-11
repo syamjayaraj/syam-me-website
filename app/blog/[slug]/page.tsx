@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import { Metadata } from "next";
 import { fetchAPI, getStrapiMedia } from "@/lib/strapi";
+import Footer from "@/components/Footer";
+
 
 async function getBlogPost(slug: string) {
   const { data } = await fetchAPI("/posts", {
@@ -100,6 +102,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </article>
       </main>
+      <Footer />
     </>
   );
 }

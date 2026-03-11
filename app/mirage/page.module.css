@@ -2,18 +2,33 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #020617; /* Deep Void */
+    color: #f8fafc; /* Spectral White */
+    position: relative;
+    overflow-x: hidden;
 }
 
 .ghostlyMain {
-    background-color: #05030f;
-    position: relative;
-    overflow-x: hidden;
     padding-top: 100px;
+}
+
+/* Film Grain Effect */
+.main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.transparenttextures.com/patterns/p6-mini.png");
+    opacity: 0.08; /* Reduced for clarity */
+    pointer-events: none;
+    z-index: 9999;
 }
 
 .storiesSection {
     flex: 1;
-    padding: 4rem 0;
+    padding: 6rem 0;
     position: relative;
     z-index: 2;
 }
@@ -24,36 +39,34 @@
     padding: 0 1.5rem;
 }
 
-.title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 0.5rem;
-    color: var(--color-text-primary);
-    background: linear-gradient(135deg, var(--color-text-primary) 0%, #a855f7 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    line-height: 1.5;
-    padding: 0.5rem 0;
-    display: block;
-    overflow: visible;
-}
-
-.subtitle {
-    font-size: 1.5rem;
-    text-align: center;
-    color: #94a3b8;
-    margin-bottom: 4rem;
-    font-style: italic;
-    font-family: var(--font-inter);
-    opacity: 0.8;
-}
-
 .headerStack {
     position: relative;
     z-index: 10;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to bottom, #f8fafc 0%, #450a0a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgba(69, 10, 10, 0.4));
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #cbd5e1; /* Lighter for clarity */
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    opacity: 0.7; /* Increased opacity */
+    font-weight: 300;
 }
 
 .soundToggle {
@@ -61,24 +74,24 @@
     bottom: 2rem;
     right: 2rem;
     z-index: 1000;
-    background: rgba(13, 8, 30, 0.8);
-    border: 1px solid rgba(168, 85, 247, 0.3);
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f8fafc;
+    width: 50px;
+    height: 50px;
+    border-radius: 4px; /* Industrial look */
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soundToggle:hover {
-    transform: scale(1.1);
-    border-color: #a855f7;
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+    background: #450a0a;
+    border-color: #ef4444;
+    box-shadow: 0 0 20px rgba(69, 10, 10, 0.6);
 }
 
 .fogOverlay {
@@ -87,206 +100,172 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/dust.png');
-    opacity: 0.05;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), transparent 0%, rgba(2, 6, 23, 0.8) 60%); /* Wider and less opaque */
     pointer-events: none;
-    z-index: 1;
-    animation: drift 60s linear infinite;
+    z-index: 5;
+    mix-blend-mode: multiply;
 }
 
 @keyframes drift {
-    from {
-        background-position: 0 0;
-    }
-
-    to {
-        background-position: 1000px 1000px;
-    }
-}
-
-@keyframes flicker {
-
-    0%,
-    18%,
-    22%,
-    25%,
-    53%,
-    57%,
-    100% {
-        opacity: 1;
-        text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
-    }
-
-    20%,
-    24%,
-    55% {
-        opacity: 0.7;
-        text-shadow: none;
-    }
-}
-
-.flicker {
-    animation: flicker 5s linear infinite;
+    from { background-position: 0 0; }
+    to { background-position: 1000px 1000px; }
 }
 
 .storiesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 3rem;
     margin-bottom: 5rem;
 }
 
+.collectionSection {
+    margin-bottom: 8rem;
+}
+
 .collectionHeader {
-    margin: 4rem 0 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--color-separator);
+    margin-bottom: 3rem;
+    border-left: 4px solid #450a0a;
+    padding-left: 1.5rem;
+}
+
+.collectionTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+.ghostTitle {
+    color: #f8fafc;
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.collectionTitle {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-text-primary);
-}
-
-.ghostHeader {
-    border-bottom-color: #814af6;
-}
-
-.ghostTitle {
-    background: linear-gradient(135deg, #a855f7 0%, #814af6 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
 .storyCard {
-    background: var(--color-background-elevated);
-    border-radius: 20px;
+    background: rgba(15, 23, 42, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
     color: inherit;
-    border: 1px solid var(--color-separator);
     display: flex;
     flex-direction: column;
 }
 
-.storyCard:hover {
-    transform: translateY(-10px);
-    border-color: #814af6;
-    box-shadow: 0 20px 40px rgba(129, 74, 246, 0.15);
-}
-
-/* Ghost Theme Card */
-.ghostCard {
-    background: linear-gradient(145deg, #130b2e 0%, #0a061a 100%);
-    border-color: rgba(129, 74, 246, 0.3);
-    position: relative;
-    overflow: hidden;
-}
-
-.ghostCard::before {
+.storyCard::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 50% 0%, rgba(129, 74, 246, 0.15) 0%, transparent 70%);
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 60%, rgba(69, 10, 10, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
-.ghostCard:hover {
-    border-color: #a855f7;
-    box-shadow: 0 0 30px rgba(129, 74, 246, 0.3);
+.storyCard:hover {
+    border-color: rgba(69, 10, 10, 0.5);
+    background: rgba(69, 10, 10, 0.05);
 }
 
-.ghostCard .storyTitle {
-    color: #e9d5ff;
-}
-
-.ghostCard .readMore {
-    color: #a855f7;
+.storyCard:hover::before {
+    opacity: 1;
 }
 
 .imageWrapper {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/5; /* More portrait, magazine like */
     overflow: hidden;
     position: relative;
+    filter: grayscale(0.8) contrast(1.2);
+    transition: filter 0.5s ease;
+}
+
+.storyCard:hover .imageWrapper {
+    filter: grayscale(0.2) contrast(1.1);
 }
 
 .storyImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .storyCard:hover .storyImage {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .storyContent {
-    padding: 2rem;
+    padding: 2.5rem 1.5rem;
     flex: 1;
     display: flex;
     flex-direction: column;
+    background: linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.8) 100%);
 }
 
 .storyTitle {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--color-text-primary);
-    line-height: 1.3;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    color: #f8fafc;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease;
+}
+
+.storyCard:hover .storyTitle {
+    color: #ef4444;
 }
 
 .storyDate {
-    font-size: 0.875rem;
-    color: var(--color-text-tertiary);
+    font-size: 0.75rem;
+    color: #94a3b8; /* Lighter for visibility */
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
 .storyMeta {
     margin-top: auto;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--color-separator);
+    padding-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .readMore {
-    color: #814af6;
-    font-weight: 600;
-    font-size: 0.875rem;
+    color: #f8fafc;
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.5rem;
+    opacity: 0.7; /* Increased for clarity */
+    transition: all 0.3s ease;
+}
+
+.storyCard:hover .readMore {
+    opacity: 1;
+    color: #ef4444;
+    transform: translateX(5px);
 }
 
 @media (max-width: 768px) {
-    .storiesSection {
-        padding: 2rem 0;
-    }
-
-    .title {
-        font-size: 2.5rem;
-    }
-
-    .storiesGrid {
+    .storiesSection { padding: 3rem 0; }
+    .title { font-size: 2.5rem; letter-spacing: 0.2rem; }
+    .storiesGrid { 
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
     }
+    .headerStack { margin-bottom: 4rem; }
 }

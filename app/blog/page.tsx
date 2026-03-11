@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
 import { fetchAPI, getStrapiMedia } from "@/lib/strapi";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Insights & Updates - The Floyet Blog",
@@ -60,6 +61,7 @@ export default async function BlogPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

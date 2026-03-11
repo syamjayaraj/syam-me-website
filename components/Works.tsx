@@ -6,25 +6,36 @@ import { useState } from "react";
 
 type Category = "products" | "writing";
 
+interface WorkItem {
+  title: string;
+  category: string;
+  desc: string;
+  link: string;
+  color: string;
+  target?: string;
+}
+
+
 export default function Works() {
   const [activeTab, setActiveTab] = useState<Category>("products");
 
-  const products = [
+  const products: WorkItem[] = [
     {
       title: "GymTie App",
       category: "Mobile App",
       desc: "Comprehensive gym management solution for owners.",
       link: "https://gymtie.com",
       color: "bg-orange-500",
+      target: "_blank",
     },
   ];
 
-  const writings = [
+  const writings: WorkItem[] = [
     {
       title: "Mirage",
       category: "Writing",
       desc: "A creative space for my Malayalam short stories, essays, and articles.",
-      link: "https://mirage.syam.me",
+      link: "/mirage",
       color: "bg-teal-500",
     },
   ];
@@ -71,7 +82,7 @@ export default function Works() {
           <motion.a
             key={project.title}
             href={project.link}
-            target="_blank"
+            target={project.target}
             rel="noreferrer"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

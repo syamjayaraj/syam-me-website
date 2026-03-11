@@ -75,7 +75,7 @@ export default function Hero() {
               Blog
             </Link>
             <Link href="/mirage" className="btn-magnetic bg-purple-600/20 text-purple-400 hover:bg-purple-600/30">
-              Stories
+              Mirage
             </Link>
           </div>
 

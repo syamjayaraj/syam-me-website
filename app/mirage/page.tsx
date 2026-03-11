@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import { Metadata } from "next";
 import { getBloggerPosts } from "@/lib/blogger";
 import MirageClient from "./MirageClient";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Mirage - Parallel Realms by Syamlal CM",
@@ -18,10 +19,13 @@ export default async function MiragePage() {
   );
 
   return (
-    <MirageClient 
-      paranormalPosts={paranormalPosts} 
-      waheedaPosts={waheedaPosts} 
-      otherPosts={otherPosts} 
-    />
+    <>
+      <MirageClient 
+        paranormalPosts={paranormalPosts} 
+        waheedaPosts={waheedaPosts} 
+        otherPosts={otherPosts} 
+      />
+      <Footer />
+    </>
   );
 }

@@ -4,6 +4,8 @@ import { Metadata } from "next";
 import { getBloggerPost } from "@/lib/blogger";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Footer from "@/components/Footer";
+import MiragePostClient from "./MiragePostClient";
 
 interface MiragePostPageProps {
   params: Promise<{ id: string }>;
@@ -46,7 +48,7 @@ export default async function MiragePostPage({ params }: MiragePostPageProps) {
                           /^\s*<img/.test(post.content);
 
   return (
-    <main className={styles.main}>
+    <MiragePostClient>
       <div className={styles.ghostlyOverlay}></div>
       <article className={styles.article}>
         <div className={styles.container}>
@@ -55,7 +57,7 @@ export default async function MiragePostPage({ params }: MiragePostPageProps) {
           </Link>
 
           <header>
-            <h1 className={`${styles.title} ${styles.scaryTitle}`}>{post.title}</h1>
+            <h1 className={styles.title}>{post.title}</h1>
             <div className={styles.meta}>
               <div className={styles.author}>
                 {post.author.image && (
@@ -98,6 +100,7 @@ export default async function MiragePostPage({ params }: MiragePostPageProps) {
           </div>
         </div>
       </article>
-    </main>
+      <Footer />
+    </MiragePostClient>
   );
 }

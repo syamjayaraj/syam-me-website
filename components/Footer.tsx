@@ -13,7 +13,7 @@ export default function Footer() {
               Blog
             </Link>
             <Link href="/mirage" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-              Stories
+              Mirage
             </Link>
             <div className="flex gap-4">
             <a href="https://www.linkedin.com/in/syamjayaraj" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-blue-600 hover:text-white transition-all">
@@ -33,7 +33,7 @@ export default function Footer() {
               Carefully Handcrafted in INDIA | Powered by <a href="https://floyet.com" className="text-white hover:text-blue-400">FLOYET</a>
             </p>
             <p>
-              Copyright © <a href="https://syam.me" className="text-white hover:text-blue-400">SYAM.ME</a> 2024
+              Copyright © <a href="https://syam.me" className="text-white hover:text-blue-400">SYAM.ME</a> 2026
             </p>
           </div>
         </div>
