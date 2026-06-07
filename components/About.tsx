@@ -1,55 +1,67 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Cpu, Globe, PenTool } from "lucide-react";
+import { Briefcase, Cpu, Globe, Users } from "lucide-react";
 
 export default function About() {
   return (
     <section id="about" className="py-20 container-custom">
       <div className="grid md:grid-cols-2 gap-12 items-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           className="space-y-6"
         >
-          <h2 className="text-3xl font-bold tracking-tight">About Me</h2>
+          <h2 className="text-3xl font-bold tracking-tight">About</h2>
           <div className="prose prose-invert text-gray-400 leading-relaxed">
             <p>
-              I'm a multidisciplinary technologist with a focus on building sustainable digital products. 
-              As the Founder and CEO of <strong>FLOYET Labs & Technologies LLP</strong>, I bridge the gap between complex engineering challenges and user-centric design.
+              I am a technology entrepreneur focused on building sustainable
+              digital businesses. As Founder and CEO of{" "}
+              <strong>Floyet Labs & Technologies LLP</strong>, I lead product
+              strategy, engineering, and go-to-market for software ventures.
             </p>
             <p>
-              My journey involves full-stack development, cloud architecture, and technical writing. 
+              With a background in full-stack development and cloud architecture,
+              I combine technical depth with business execution — from early-stage
+              product design to scaling teams and systems.
             </p>
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           className="grid grid-cols-2 gap-4"
         >
           <div className="bento-card p-6 flex flex-col gap-3">
-             <Code2 className="w-8 h-8 text-blue-500" />
-             <h3 className="font-bold">Engineering</h3>
-             <p className="text-xs text-gray-500">Next.js, React Native, Node.js</p>
+            <Briefcase className="w-8 h-8 text-blue-500" />
+            <h3 className="font-bold">Leadership</h3>
+            <p className="text-xs text-gray-500">
+              Company building, strategy, and operations
+            </p>
           </div>
           <div className="bento-card p-6 flex flex-col gap-3">
-             <Cpu className="w-8 h-8 text-purple-500" />
-             <h3 className="font-bold">Architecture</h3>
-             <p className="text-xs text-gray-500">Scalable Systems, Cloud Design</p>
+            <Cpu className="w-8 h-8 text-purple-500" />
+            <h3 className="font-bold">Engineering</h3>
+            <p className="text-xs text-gray-500">
+              Next.js, React Native, Node.js, cloud systems
+            </p>
           </div>
           <div className="bento-card p-6 flex flex-col gap-3">
-             <Globe className="w-8 h-8 text-green-500" />
-             <h3 className="font-bold">Entrepreneurship</h3>
-             <p className="text-xs text-gray-500">Product Strategy, Leadership</p>
+            <Globe className="w-8 h-8 text-green-500" />
+            <h3 className="font-bold">Product</h3>
+            <p className="text-xs text-gray-500">
+              SaaS, mobile apps, and platform design
+            </p>
           </div>
           <div className="bento-card p-6 flex flex-col gap-3">
-             <PenTool className="w-8 h-8 text-orange-500" />
-             <h3 className="font-bold">Writing</h3>
-             <p className="text-xs text-gray-500">Tech Blogs & Malayalam Literature</p>
+            <Users className="w-8 h-8 text-orange-500" />
+            <h3 className="font-bold">Teams</h3>
+            <p className="text-xs text-gray-500">
+              Hiring, mentoring, and cross-functional delivery
+            </p>
           </div>
         </motion.div>
       </div>

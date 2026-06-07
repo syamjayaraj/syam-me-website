@@ -30,7 +30,7 @@ export default function Footer() {
 
           <div className="text-center md:text-right text-sm text-gray-500 space-y-2">
             <p>
-              Carefully Handcrafted in INDIA | Powered by <a href="https://floyet.com" className="text-white hover:text-blue-400">FLOYET</a>
+              Built in India · <a href="https://floyet.com" className="text-white hover:text-blue-400">Floyet Labs & Technologies</a>
             </p>
             <p>
               Copyright © <a href="https://syam.me" className="text-white hover:text-blue-400">SYAM.ME</a> 2026

@@ -10,7 +10,7 @@ export default function Experience() {
   ];
 
   return (
-    <section className="py-20 container-custom max-w-4xl mx-auto">
+    <section id="experience" className="py-20 container-custom max-w-4xl mx-auto">
       <h2 className="text-3xl font-bold mb-12 border-b border-white/10 pb-4">Experience</h2>
       <div className="space-y-8">
         {jobs.map((job, index) => (

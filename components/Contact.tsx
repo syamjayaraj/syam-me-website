@@ -1,18 +1,18 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Mail, MessageCircle, Phone } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 
 export default function Contact() {
   return (
     <section id="contact" className="py-20 container-custom">
       <div className="bento-card p-12 text-center space-y-8 bg-gradient-to-b from-transparent to-blue-900/10">
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-          Ready to build something?
+          Let&apos;s connect
         </h2>
         <p className="text-gray-400 max-w-xl mx-auto">
-          Whether you have a project in mind or just want to chat about tech,
-          I'm always open to new connections.
+          Open to partnerships, advisory conversations, and opportunities to
+          build ambitious products. Reach out directly — I respond to every
+          serious inquiry.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
@@ -25,6 +25,7 @@ export default function Contact() {
           <a
             href="https://wa.me/919946792650"
             target="_blank"
+            rel="noreferrer"
             className="btn-magnetic border border-white/20 hover:bg-white/5"
           >
             <MessageCircle className="w-4 h-4 mr-2" />

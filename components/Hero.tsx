@@ -2,46 +2,42 @@
 
 import { motion } from "framer-motion";
 import {
-  ArrowUpRight,
   Github,
   Linkedin,
   Mail,
   MapPin,
   Twitter,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
     <section className="min-h-screen py-20 container-custom flex flex-col justify-center">
-      {/* Intro Header */}
       <div className="mb-12">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-5xl md:text-7xl font-bold tracking-tight mb-6"
         >
-          Architecting <span className="text-gray-500">digital</span> <br />
-          <span className="text-white">ecosystems.</span>
+          Building technology <br />
+          <span className="text-gray-500">that</span>{" "}
+          <span className="text-white">scales.</span>
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="flex gap-4 md:gap-8 text-gray-400 text-sm md:text-base font-medium"
+          className="flex flex-wrap gap-x-4 gap-y-2 text-gray-400 text-sm md:text-base font-medium"
         >
-          <span>Software Engineer</span>
-          <span className="w-1 h-1 bg-gray-600 rounded-full self-center"></span>
-          <span>Internet Entrepreneur</span>
-          <span className="w-1 h-1 bg-gray-600 rounded-full self-center"></span>
-          <span>Tech & Lit Writer</span>
+          <span>Founder & CEO</span>
+          <span className="hidden sm:inline w-1 h-1 bg-gray-600 rounded-full self-center" />
+          <span>Product Builder</span>
+          <span className="hidden sm:inline w-1 h-1 bg-gray-600 rounded-full self-center" />
+          <span>Technology Leader</span>
         </motion.div>
       </div>
 
-      {/* Bento Grid */}
       <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
-        {/* Card 1: Main Profile (Large) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -49,41 +45,50 @@ export default function Hero() {
           className="bento-card md:col-span-2 md:row-span-2 relative group p-8 flex flex-col justify-between"
         >
           <div className="space-y-4 z-10">
-            <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-3xl">
-              👋
+            <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-xl font-bold tracking-tight">
+              SC
             </div>
             <h2 className="text-3xl font-bold leading-tight">
-              Hi, I'm Syamlal CM. <br />I turn complex problems into{" "}
-              <span className="text-gray-400">elegant solutions.</span>
+              Syamlal CM
             </h2>
-            <p className="text-gray-400 max-w-sm leading-relaxed">
-              Founder & CEO of Floyet Labs & Technologies LLP. Specializing in
-              high-performance web/mobile applications and scalable architecture.
+            <p className="text-gray-400 max-w-md leading-relaxed">
+              Founder & CEO of{" "}
+              <a
+                href="https://floyet.com"
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-blue-400 transition-colors"
+              >
+                Floyet Labs & Technologies LLP
+              </a>
+              . I build and lead teams that ship high-performance web and mobile
+              products with scalable architecture.
             </p>
           </div>
-          <div className="flex gap-4 pt-8 z-10">
+          <div className="flex flex-wrap gap-3 pt-8 z-10">
             <a
               href="#contact"
               className="btn-magnetic bg-white text-black hover:bg-gray-200"
             >
-              Let's Talk
+              Get in Touch
             </a>
-            <a href="#works" className="btn-magnetic">
-              View Work
+            <a
+              href="#experience"
+              className="btn-magnetic"
+            >
+              Experience
             </a>
-            <Link href="/blog" className="btn-magnetic bg-blue-600/20 text-blue-400 hover:bg-blue-600/30">
+            <Link
+              href="/blog"
+              className="btn-magnetic text-gray-300 hover:text-white"
+            >
               Blog
-            </Link>
-            <Link href="/mirage" className="btn-magnetic bg-purple-600/20 text-purple-400 hover:bg-purple-600/30">
-              Mirage
             </Link>
           </div>
 
-          {/* Subtle Abstract Background */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-purple-500/10 blur-3xl rounded-full pointer-events-none" />
         </motion.div>
 
-        {/* Card 2: Photo (Tall) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -102,7 +107,6 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Card 3: Location / Map */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -113,7 +117,7 @@ export default function Hero() {
             <div className="bg-white/10 p-2.5 rounded-xl text-white">
               <MapPin className="w-5 h-5" />
             </div>
-            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
           </div>
           <div>
             <h3 className="text-lg font-bold">Kozhikode, Kerala</h3>
@@ -123,7 +127,6 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Card 4: Socials / Connect */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -134,6 +137,7 @@ export default function Hero() {
             <a
               href="https://github.com/syamjayaraj"
               target="_blank"
+              rel="noreferrer"
               className="flex items-center justify-center bg-white/5 rounded-2xl hover:bg-white/10 hover:text-white transition-colors"
             >
               <Github className="w-6 h-6" />
@@ -141,6 +145,7 @@ export default function Hero() {
             <a
               href="https://twitter.com/syamjayaraj"
               target="_blank"
+              rel="noreferrer"
               className="flex items-center justify-center bg-white/5 rounded-2xl hover:bg-white/10 hover:text-blue-400 transition-colors"
             >
               <Twitter className="w-6 h-6" />
@@ -148,6 +153,7 @@ export default function Hero() {
             <a
               href="https://linkedin.com/in/syamjayaraj"
               target="_blank"
+              rel="noreferrer"
               className="flex items-center justify-center bg-white/5 rounded-2xl hover:bg-white/10 hover:text-blue-600 transition-colors"
             >
               <Linkedin className="w-6 h-6" />

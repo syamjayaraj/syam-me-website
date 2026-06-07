@@ -20,23 +20,22 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: `Syamlal CM | Software Engineer • Internet Entrepreneur • Writer`,
-  description: `Syamlal CM is a Software Engineer, Internet Entrepreneur, and Writer. Founder & CEO at Floyet Labs & Technologies. Building innovative tech solutions.`,
+  title: `Syamlal CM | Founder & CEO · Floyet Labs & Technologies`,
+  description: `Syamlal CM is a technology entrepreneur and Founder & CEO of Floyet Labs & Technologies LLP. Building scalable web and mobile products.`,
   keywords: [
     "syamlal cm",
-    "software engineer",
-    "internet entrepreneur",
-    "writer",
+    "founder",
+    "ceo",
+    "technology entrepreneur",
     "floyet",
-    "next.js",
-    "web developer",
+    "product builder",
+    "software",
   ],
   openGraph: {
     type: "website",
-    title: `Syamlal CM | Software Engineer • Internet Entrepreneur • Writer`,
-    description: `Leading innovation at Floyet Labs & Technologies. Software Engineer & Entrepreneur.`,
+    title: `Syamlal CM | Founder & CEO · Floyet Labs & Technologies`,
+    description: `Technology entrepreneur building scalable digital products at Floyet Labs & Technologies.`,
     url: "https://syam.me",
-    // images: "/assets/images/syamlal-og.jpg", // Kept commented or as is
   },
 };
 
