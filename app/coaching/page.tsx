@@ -15,13 +15,14 @@ import {
   Smartphone,
 } from "lucide-react";
 import Footer from "@/components/Footer";
+import CoachingPricing from "@/components/CoachingPricing";
 import { products } from "@/lib/products";
 import { OG_IMAGE, SITE_NAME, SITE_URL, jsonLd } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Learn Web & App Development with AI — Coding Mentor in Kerala | Syamlal CM",
+  title: "Build & Launch a SaaS with AI — Founder-Led Coaching | Syamlal CM",
   description:
-    "Personal coding mentorship from Kozhikode, Kerala — online for anyone. Learn HTML, CSS, JavaScript, React, React Native, Next.js and Strapi, build complete web and mobile apps with AI tools like Claude Code and Codex, take them live and turn them into a SaaS business.",
+    "Live global coaching from Syamlal CM, Founder & CEO of Floyet Labs & Technologies. Build, deploy and launch your own SaaS product with React, Next.js, Codex and Claude Code.",
   keywords: [
     "coding classes kozhikode",
     "web development course kerala",
@@ -30,14 +31,16 @@ export const metadata: Metadata = {
     "learn coding with ai",
     "claude code course",
     "build saas",
-    "full stack mentor india",
+    "founder coaching",
+    "global coding mentor",
+    "saas mentorship",
     "syamlal cm",
   ],
   alternates: { canonical: "/coaching" },
   openGraph: {
     title: "Learn to Build & Launch Apps — Mentoring by Syamlal CM",
     description:
-      "From your first line of code to a live, money-making SaaS product. Taught by a founder who runs real products.",
+      "Build and launch a real SaaS product with direct coaching from the Founder & CEO of Floyet Labs & Technologies.",
     url: "/coaching",
     type: "website",
     siteName: SITE_NAME,
@@ -54,7 +57,7 @@ export const metadata: Metadata = {
 
 const WHATSAPP_LINK =
   "https://wa.me/919946792650?text=" +
-  encodeURIComponent("Hi Syam, I'm interested in your coaching program. I'd like to book a free call.");
+  encodeURIComponent("Hi Syam, I'm interested in the $499 founding cohort. I'd like to book a free fit call.");
 
 const steps = [
   {
@@ -133,9 +136,9 @@ const audience = [
 ];
 
 const process = [
-  { title: "Free call", text: "We talk about your goals and where you are today." },
-  { title: "Your plan", text: "I create a learning path that fits your level and time." },
-  { title: "Live sessions", text: "Learn by building, with personal reviews and support." },
+  { title: "Free fit call", text: "We make sure the cohort matches your goals and experience." },
+  { title: "Join the cohort", text: "Reserve one of eight seats and prepare your product idea." },
+  { title: "Build live", text: "Learn by shipping, with direct feedback and code reviews." },
   { title: "Launch", text: "Your product goes live — and you know how to grow it." },
 ];
 
@@ -158,7 +161,11 @@ const faqs = [
   },
   {
     q: "How much does it cost?",
-    a: "It depends on the format and the depth you need. Book a free call and I'll share the right plan and fees for you.",
+    a: "The founding cohort costs $499 USD, with fixed localized prices available in the currency selector. It is a one-time fee for the complete six-week program.",
+  },
+  {
+    q: "How many seats are available?",
+    a: "Each cohort is limited to eight students so everyone gets direct feedback, code reviews and personal attention.",
   },
 ];
 
@@ -183,7 +190,15 @@ const structuredData = {
       hasCourseInstance: {
         "@type": "CourseInstance",
         courseMode: "Online",
+        courseWorkload: "P6W",
         instructor: { "@id": `${SITE_URL}/#person` },
+      },
+      offers: {
+        "@type": "Offer",
+        price: "499",
+        priceCurrency: "USD",
+        availability: "https://schema.org/LimitedAvailability",
+        url: `${SITE_URL}/coaching#pricing`,
       },
     },
     {
@@ -233,7 +248,7 @@ export default function CoachingPage() {
         <div className="relative max-w-4xl mx-auto text-center space-y-8">
           <span className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Personal mentoring · Limited seats
+            Founder-led coaching · Only 8 seats
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.05]">
             Learn to build apps.
@@ -245,8 +260,11 @@ export default function CoachingPage() {
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
             From your first line of code to a live web and mobile app — built
-            with modern AI tools and turned into a real SaaS business. Taught by
-            a founder who builds and runs software products every day.
+            with modern AI tools and turned into a real SaaS business. Get coached
+            directly by Syamlal CM, Founder &amp; CEO of Floyet Labs &amp; Technologies.
+          </p>
+          <p className="text-sm font-medium text-gray-300">
+            Founding cohort from <span className="text-white">$499</span> · Live online · Open worldwide
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <a
@@ -258,8 +276,8 @@ export default function CoachingPage() {
               <MessageCircle className="w-4 h-4 mr-2" />
               Book a free call
             </a>
-            <a href="#path" className="btn-magnetic border border-white/15">
-              See what you&apos;ll learn
+            <a href="#pricing" className="btn-magnetic border border-white/15">
+              View program &amp; pricing
             </a>
           </div>
         </div>
@@ -352,7 +370,7 @@ export default function CoachingPage() {
             <div className="bento-card hover:scale-100 md:col-span-3 p-8 md:p-10 flex flex-col justify-center space-y-5">
               <p className="text-xs font-mono uppercase tracking-widest text-gray-500">Your mentor</p>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
-                Learn from someone who actually ships.
+                Get coached directly by a Founder &amp; CEO.
               </h2>
               <p className="text-gray-400 leading-relaxed">
                 I&apos;m a software engineer and founder. I&apos;ve co-founded a tech
@@ -387,6 +405,16 @@ export default function CoachingPage() {
               ))}
             </div>
           </div>
+        </section>
+
+        {/* Program and pricing */}
+        <section id="pricing" className="container-custom max-w-5xl scroll-mt-10">
+          <SectionHeading
+            eyebrow="Founding cohort"
+            title="Founder-level guidance, without the guesswork."
+            text="One global program with fixed local-currency prices. Choose your currency to see the complete program fee."
+          />
+          <CoachingPricing whatsappLink={WHATSAPP_LINK} />
         </section>
 
         {/* How it works */}
@@ -428,8 +456,8 @@ export default function CoachingPage() {
               Ready to build something real?
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto">
-              Seats are limited so every student gets personal attention. Start
-              with a free, no-pressure call.
+              The founding cohort is limited to eight students. Join from $499
+              and get direct guidance from a Founder &amp; CEO throughout your build.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
