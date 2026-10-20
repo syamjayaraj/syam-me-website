@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import {
+  ArrowRight,
   Github,
+  GraduationCap,
   Linkedin,
   Mail,
   MapPin,
@@ -14,14 +16,36 @@ export default function Hero() {
   return (
     <section className="min-h-screen py-20 container-custom flex flex-col justify-center">
       <div className="mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-8"
+        >
+          <Link
+            href="/coaching"
+            className="group inline-flex items-center gap-3 pl-2 pr-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 hover:border-emerald-400/50 hover:bg-emerald-500/15 transition-all"
+          >
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-400 text-black text-xs font-bold whitespace-nowrap">
+              <GraduationCap className="w-3.5 h-3.5" />
+              Learn with me
+            </span>
+            <span className="text-sm text-emerald-100/90 whitespace-nowrap">
+              <span className="hidden sm:inline">Build apps with AI, take them live & earn — seats open</span>
+              <span className="sm:hidden">Build, launch & earn</span>
+            </span>
+            <ArrowRight className="w-4 h-4 text-emerald-300 group-hover:translate-x-0.5 transition-transform" />
+          </Link>
+        </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.05 }}
           className="text-5xl md:text-7xl font-bold tracking-tight mb-6"
         >
-          Building technology <br />
+          <span className="sr-only">Syamlal CM — </span>
+          Building products <br />
           <span className="text-gray-500">that</span>{" "}
-          <span className="text-white">scales.</span>
+          <span className="text-white">scale.</span>
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +57,7 @@ export default function Hero() {
           <span className="hidden sm:inline w-1 h-1 bg-gray-600 rounded-full self-center" />
           <span>Product Builder</span>
           <span className="hidden sm:inline w-1 h-1 bg-gray-600 rounded-full self-center" />
-          <span>Technology Leader</span>
+          <span>Mentor</span>
         </motion.div>
       </div>
 
@@ -61,9 +85,22 @@ export default function Hero() {
               >
                 Floyet Labs & Technologies LLP
               </a>
-              . I build and lead teams that ship high-performance web and mobile
-              products with scalable architecture.
+              . I build and run web and mobile products used by gyms,
+              restaurants, temples and families across India — and I mentor
+              people to do the same.
             </p>
+            <div className="grid grid-cols-3 gap-3 pt-2 max-w-md">
+              {[
+                { value: "5", label: "Live products" },
+                { value: "2018", label: "Building since" },
+                { value: "Web + App", label: "Full stack" },
+              ].map((stat) => (
+                <div key={stat.label} className="rounded-2xl bg-white/[0.03] border border-white/5 p-3">
+                  <p className="text-lg font-bold font-heading">{stat.value}</p>
+                  <p className="text-[11px] text-gray-500 uppercase tracking-wider mt-0.5">{stat.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="flex flex-wrap gap-3 pt-8 z-10">
             <a
@@ -73,16 +110,16 @@ export default function Hero() {
               Get in Touch
             </a>
             <a
-              href="#experience"
+              href="#products"
               className="btn-magnetic"
             >
-              Experience
+              Products
             </a>
             <Link
-              href="/blog"
-              className="btn-magnetic text-gray-300 hover:text-white"
+              href="/coaching"
+              className="btn-magnetic border border-emerald-500/30 text-emerald-300 hover:text-emerald-200"
             >
-              Blog
+              Learn with me
             </Link>
           </div>
 

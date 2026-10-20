@@ -9,6 +9,9 @@ export default function Footer() {
       <div className="container-custom py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex gap-6 items-center">
+            <Link href="/coaching" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+              Coaching
+            </Link>
             <Link href="/blog" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
               Blog
             </Link>

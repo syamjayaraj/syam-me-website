@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { fetchAPI, getStrapiMedia } from "@/lib/strapi";
 import Footer from "@/components/Footer";
+import { OG_IMAGE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Insights & Updates - The Floyet Blog",
@@ -11,7 +12,10 @@ export const metadata: Metadata = {
     title: "The Floyet Blog - Insights & Updates",
     description: "Explore the latest insights on digital product engineering and business automation from the Floyet team.",
     type: "website",
+    url: "/blog",
+    images: [{ url: OG_IMAGE, width: 960, height: 960, alt: "Syamlal CM" }],
   },
+  alternates: { canonical: "/blog" },
 };
 
 export default async function BlogPage() {

@@ -6,6 +6,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import MiragePostClient from "./MiragePostClient";
+import { toPlainText } from "@/lib/site";
 
 interface MiragePostPageProps {
   params: Promise<{ id: string }>;
@@ -23,12 +24,20 @@ export async function generateMetadata({
     };
   }
 
+  const description = toPlainText(post.content) || post.title;
+
   return {
     title: `${post.title} | Mirage`,
-    description: post.title,
+    description,
+    alternates: { canonical: `/mirage/${resolvedParams.id}` },
     openGraph: {
       title: post.title,
+      description,
       type: "article",
+      url: `/mirage/${resolvedParams.id}`,
+      publishedTime: post.published,
+      modifiedTime: post.updated,
+      authors: ["Syamlal CM"],
       images: post.thumbnail ? [post.thumbnail] : [],
     },
   };

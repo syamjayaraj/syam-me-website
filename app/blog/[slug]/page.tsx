@@ -36,10 +36,14 @@ export async function generateMetadata({
   return {
     title: seo.metaTitle || `${post.title} | Floyet Blog`,
     description: seo.metaDescription || post.excerpt,
+    alternates: { canonical: `/blog/${resolvedParams.slug}` },
     openGraph: {
       title: seo.metaTitle || post.title,
       description: seo.metaDescription || post.excerpt,
       type: "article",
+      url: `/blog/${resolvedParams.slug}`,
+      publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt,
       images: post.image?.url
         ? [
             {
