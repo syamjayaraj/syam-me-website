@@ -1,0 +1,24 @@
+name: Deploy to Production Droplet
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy Syam Me Website
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH to Droplet
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script_stop: true
+          script: |
+            /var/www/apps/syam-me-website/deploy.sh
