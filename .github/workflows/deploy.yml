@@ -30,18 +30,19 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           envs: GH_PAT
+          command_timeout: 20m
           script_stop: true
           script: |
             export GH_PAT="$GH_PAT"
-            /var/www/apps/syam-me-website/deploy.sh
+            /usr/local/bin/droplet-deploy.sh "/var/www/apps/syam-me-website" "main" "syam-me-website"
 
       - name: Report Deployment Status to GitHub
         if: always()
         run: |
           if [ "${{ steps.ssh_deploy.outcome }}" == "success" ]; then
-            echo "### 🚀 Deployment Succeeded" >> "$GITHUB_STEP_SUMMARY"
-            echo "Deployed **${{ github.repository }}** (`${{ github.ref_name }}`) to droplet." >> "$GITHUB_STEP_SUMMARY"
+            echo "### Deployment Succeeded" >> "$GITHUB_STEP_SUMMARY"
+            echo "Deployed **${{ github.repository }}** (${{ github.ref_name }}) to droplet." >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "### ❌ Deployment Failed" >> "$GITHUB_STEP_SUMMARY"
-            echo "Deployment failed on the droplet. Check the red **Annotations** above or **Deploy via SSH to Droplet** logs for `[DEPLOY ERROR]`." >> "$GITHUB_STEP_SUMMARY"
+            echo "### Deployment Failed" >> "$GITHUB_STEP_SUMMARY"
+            echo "Deployment failed on the droplet. Check the red Annotations above or Deploy via SSH to Droplet logs for [DEPLOY ERROR]." >> "$GITHUB_STEP_SUMMARY"
           fi
