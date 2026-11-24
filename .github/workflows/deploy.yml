@@ -6,19 +6,42 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-syam-me-website-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   deploy:
-    name: Deploy Syam Me Website
+    name: Deploy Syam Website
     runs-on: ubuntu-latest
 
     steps:
       - name: Deploy via SSH to Droplet
+        id: ssh_deploy
         uses: appleboy/ssh-action@v1.0.3
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
+          envs: GH_PAT
           script_stop: true
           script: |
+            export GH_PAT="$GH_PAT"
             /var/www/apps/syam-me-website/deploy.sh
+
+      - name: Report Deployment Status to GitHub
+        if: always()
+        run: |
+          if [ "${{ steps.ssh_deploy.outcome }}" == "success" ]; then
+            echo "### 🚀 Deployment Succeeded" >> "$GITHUB_STEP_SUMMARY"
+            echo "Deployed **${{ github.repository }}** (`${{ github.ref_name }}`) to droplet." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "### ❌ Deployment Failed" >> "$GITHUB_STEP_SUMMARY"
+            echo "Deployment failed on the droplet. Check the red **Annotations** above or **Deploy via SSH to Droplet** logs for `[DEPLOY ERROR]`." >> "$GITHUB_STEP_SUMMARY"
+          fi
